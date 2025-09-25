@@ -1,0 +1,55 @@
+/* website style rules:*/
+
+ 
+  body
+  {
+
+  }
+  
+  h1
+  {
+  }
+  
+  h2
+  {
+	
+  }
+  
+  li
+  {
+	
+  }
+  
+  p
+  {
+	
+  }
+  
+  
+  img
+  {
+	  float: right;
+  }
+  
+  #topimage
+  {
+	  float: none;
+	  border-color: black;
+	  border-width: 1px;
+	  border-style: solid;
+	  
+  }
+  nav container navigation
+ {
+  color: #490449;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:visited
+  {
+	  color: purple;
+  }
+nav a:hover {
+  color: #db0edb;
+}

@@ -84,8 +84,3 @@ footer {
   * { animation: none !important; transition: none !important; }
 }
 
-/* for small screens */
-@media (max-width: 640px) {
-  .container { padding: 16px; }
-  .card { padding: 18px; }
-}

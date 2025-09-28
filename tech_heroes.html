@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tech Hero - Ifeoma Ozoma</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Tech Hero – Ifeoma Ozoma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header>
-    <nav>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="container">
+    <nav aria-label="Primary">
       <ul class="navigation">
-        <li><a href="index.html">Homepage</a></li>
-        <li><a href="tech_heroes.html">Tech Heroes</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="index.html">First stop</a></li>
+        <li><a href="tech_heroes.html" aria-current="page">Who inspires us</a></li>
+        <li><a href="resources.html">Quick starter kit</a></li>
+        <li><a href="about_us.html">Meet the crew</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Tech Hero: Ifeoma Ozoma</h1>
-    <p>
-      Ifeoma Ozoma is a policy expert and activist, and one of the most prominent whistleblowers in the U.S. tech industry. 
-      A Yale graduate and daughter of Nigerian immigrants, she worked at Google, Facebook, and Pinterest, 
-      where she experienced racism, gender discrimination, and unequal pay. 
-      In 2020, she and her colleague publicly accused Pinterest of discrimination, breaking the silence many tech workers had endured.
-    </p>
+  <!-- Main -->
+  <main id="content" class="container">
+    <article class="card">
+      <h1>Tech Hero: Ifeoma Ozoma</h1>
 
-    <p>
-      Beyond sharing her story, Ozoma became a key advocate for structural change. 
-      She helped drive the passage of California’s <em>Silenced No More Act</em> in 2021, 
-      which prohibits companies from using nondisclosure agreements to silence employees who report workplace discrimination. 
-      Her advocacy has inspired similar efforts in other states.
-    </p>
+      <blockquote class="quote">
+        “Preparedness is power.” <cite>— Ifeoma Ozoma</cite>
+      </blockquote>
 
-    <p>
-      Ozoma also launched the <a href="https://techworkerhandbook.org" target="_blank">Tech Worker Handbook</a>, 
-      a practical resource that educates employees about their rights, how to navigate NDAs, 
-      and how to protect themselves if they choose to speak out. 
-      The handbook has already reached tens of thousands of readers, empowering workers to challenge unfair systems.
-    </p>
+      <!--for later-->
+      <!-- <img class="hero-img" src="images/ifeoma-ozoma.jpg" alt="Ifeoma Ozoma speaking at a community tech event"> -->
 
-    <p>
-      Her journey highlights intersectionality: how race, gender, and class intersect in shaping workplace experiences. 
-      As a Black woman in Silicon Valley, Ozoma showed how systemic inequality is reinforced 
-      not only by individual biases but also by institutional practices such as wage gaps and restrictive contracts. 
-      By transforming her challenges into activism, she has influenced corporate policies, cultural expectations, and laws. 
-    </p>
+      <p>
+        Ifeoma Ozoma is a policy expert and activist, and one of the most prominent whistleblowers in the U.S. tech industry.
+        A Yale graduate and daughter of Nigerian immigrants, she worked at Google, Facebook, and Pinterest, where she experienced racism,
+        gender discrimination, and unequal pay. In 2020, she and her colleague publicly accused Pinterest of discrimination,
+        breaking the silence many tech workers had endured.
+      </p>
 
-    <p>
-      Today, Ozoma continues her advocacy through her consulting firm <strong>Earthseed</strong>, 
-      advising organizations on equity and inclusion while holding tech giants like Apple accountable. 
-      Her guiding principle is simple but powerful: <strong>“Preparation is Power.”</strong>
-    </p>
+      <p>
+        Beyond sharing her story, Ozoma became a key advocate for structural change.
+        She helped drive the passage of California’s <em>Silenced No More Act</em> in 2021,
+        which prohibits companies from using nondisclosure agreements to silence employees who report workplace discrimination.
+        Her advocacy has inspired similar efforts in other states.
+      </p>
 
-    <p class="source">
-      Source: <a href="https://www.nytimes.com/2021/11/24/technology/pinterest-whistle-blower-ifeoma-ozoma.html?smid=url-share" target="_blank">
-      New York Times (2021) – Tech Whistle-Blower Helps Others Speak Out</a>
-    </p>
+      <p>
+        Ozoma also launched the <a href="https://techworkerhandbook.org" target="_blank" rel="noopener">Tech Worker Handbook</a>,
+        a practical resource that educates employees about their rights, how to navigate NDAs, and how to protect themselves if they choose to speak out.
+        The handbook has already reached tens of thousands of readers, empowering workers to challenge unfair systems.
+      </p>
+
+      <p>
+        Her journey highlights intersectionality: how race, gender, and class intersect in shaping workplace experiences.
+        As a Black woman in Silicon Valley, Ozoma showed how systemic inequality is reinforced not only by individual biases
+        but also by institutional practices such as wage gaps and restrictive contracts. By transforming her challenges into activism,
+        she has influenced corporate policies, cultural expectations, and laws.
+      </p>
+
+      <p>
+        Today, Ozoma continues her advocacy through her consulting firm <strong>Earthseed</strong>, advising organizations on equity and inclusion
+        while holding tech giants like Apple accountable. Her guiding principle is simple but powerful: <strong>“Preparation is Power.”</strong>
+      </p>
+
+      <p class="source">
+        Source: <a href="https://www.nytimes.com/2021/11/24/technology/pinterest-whistle-blower-ifeoma-ozoma.html?smid=url-share" target="_blank" rel="noopener">
+        New York Times (2021) – Tech Whistle-Blower Helps Others Speak Out</a>
+      </p>
+    </article>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>Project #2 Website – LIS 500 | Group 1</p>
+  <footer class="container">
+    <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 </body>
 </html>
-
-

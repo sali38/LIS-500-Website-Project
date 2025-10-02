@@ -143,7 +143,6 @@ footer {
   }
 }
 
-/* Tech Hero buttons */
 .hero-grid{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -180,5 +179,3 @@ footer {
   font-size:.92rem;
   color:#5c6e5c;
 }
-
-

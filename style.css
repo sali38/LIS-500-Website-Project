@@ -142,3 +142,43 @@ footer {
     transition: none !important; 
   }
 }
+
+/* Tech Hero buttons */
+.hero-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  margin-top:12px;
+}
+
+.hero-btn{
+  display:block;
+  padding:16px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  background:#ffffff;
+  border:1px solid #e6efe6;
+  box-shadow:0 8px 18px rgba(30,40,30,.08);
+  color:#113a1f;
+  transition:transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.hero-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 12px 24px rgba(30,40,30,.12);
+  border-color:#cfead6;
+}
+
+.hero-title{
+  display:block;
+  font-weight:800;
+  margin-bottom:4px;
+}
+
+.hero-sub{
+  display:block;
+  font-size:.92rem;
+  color:#5c6e5c;
+}
+
+

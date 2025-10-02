@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigation -->
   <header class="container">
-    <nav>
+    <nav aria-label="Primary">
       <ul class="navigation">
         <li><a href="index.html">First stop</a></li>
         <li><a href="tech_heroes.html" aria-current="page">Tech Heroes</a></li>
@@ -18,19 +19,32 @@
     </nav>
   </header>
 
+  <!-- Main -->
   <main id="content" class="container">
     <article class="card">
       <h1>Our Tech Heroes</h1>
       <p>Each of our team members chose a Tech Hero who inspires us in different ways. Explore their stories:</p>
 
-      <ul>
-        <li><a href="ifeoma.html">Ifeoma Ozoma</a></li>
-        <li><a href="dorothy.html">Dorothy Vaughan</a></li>
-        <li><a href="jamie.html">Jamie Gong</a></li>
-      </ul>
+      <div class="hero-grid" role="list">
+        <a class="hero-btn" role="listitem" href="ifeoma.html">
+          <span class="hero-title">Ifeoma Ozoma</span>
+          <span class="hero-sub">Whistleblower • Tech Worker Handbook</span>
+        </a>
+
+        <a class="hero-btn" role="listitem" href="dorothy.html">
+          <span class="hero-title">Dorothy Vaughan</span>
+          <span class="hero-sub">NASA Mathematician • Early AI Programmer</span>
+        </a>
+
+        <a class="hero-btn" role="listitem" href="jamie.html">
+          <span class="hero-title">Jamie Gong</span>
+          <span class="hero-sub">CareHero • Tech for Senior Care</span>
+        </a>
+      </div>
     </article>
   </main>
 
+  <!-- Footer -->
   <footer class="container">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>

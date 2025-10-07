@@ -11,7 +11,7 @@
   border-radius: 14px;
   padding: 22px;
   box-shadow: 0 8px 18px rgba(30, 40, 30, .08);
-  margin-bottom: 20px;        /* 카드 사이 여백 */
+  margin-bottom: 20px;       
 }
 
 /* typography */
@@ -31,11 +31,11 @@ h1, h2, h3 {
 
 h1 { 
   font-size: clamp(28px, 3.2vw, 38px); 
-  text-align: center;        /* 제목 중앙 정렬 */
+  text-align: center;        
 }
 
 h2 { 
-  text-align: center;        /* 부제목 중앙 정렬 */
+  text-align: center;       
 }
 
 p { 
@@ -50,7 +50,7 @@ p {
   display: flex; 
   gap: 10px; 
   flex-wrap: wrap;
-  justify-content: center;   /* 네비게이션 중앙 정렬 */
+  justify-content: center;   
 }
 
 .navigation a {
@@ -125,7 +125,7 @@ footer {
   margin-top: 28px; 
   padding-top: 14px;
   font-size: .95rem;
-  text-align: center;     /* footer 중앙 정렬 */
+  text-align: center;     /* footer */
 }
 
 /* focus/keyboard */
@@ -212,3 +212,4 @@ footer {
   line-height: 1.6;
   display: block;
 }
+

@@ -42,7 +42,7 @@ p {
   margin: .5rem 0 1rem; 
 }
 
-/* navigation pills */
+/* navigation bar style/hover */
 .navigation {
   list-style: none; 
   margin: 0; 
@@ -109,7 +109,7 @@ p {
   background: linear-gradient(135deg, rgba(123, 207, 135, .10), transparent);
 }
 
-/* media */
+/* hero media */
 .hero-img {
   max-width: 600px; 
   height: auto;
@@ -142,7 +142,7 @@ footer {
     transition: none !important; 
   }
 }
-
+/* grids/buttons for hero pages */
 .hero-grid{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -180,7 +180,7 @@ footer {
   color:#5c6e5c;
 }
 
-/* This is about us grid */
+/* about us grid */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -212,4 +212,5 @@ footer {
   line-height: 1.6;
   display: block;
 }
+
 

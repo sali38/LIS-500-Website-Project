@@ -188,7 +188,7 @@ footer {
   margin-top: 20px;
 }
 
-/* Individual Team Member Cards with bios*/
+/* Individual Team Member Cards */
 .about-card {
   background: #ffffff;
   border: 1px solid #e6efe6;
@@ -212,5 +212,3 @@ footer {
   line-height: 1.6;
   display: block;
 }
-
-

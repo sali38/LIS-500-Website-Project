@@ -180,3 +180,37 @@ footer {
   color:#5c6e5c;
 }
 
+/* This is about us grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Individual Team Member Cards with bios*/
+.about-card {
+  background: #ffffff;
+  border: 1px solid #e6efe6;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 6px 16px rgba(30, 40, 30, 0.06);
+  color: #1f2a1f;
+  transition: transform 0.1s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(30, 40, 30, 0.1);
+}
+
+.about-card p {
+  margin: 0 0 0.5rem;
+}
+
+.about-card small {
+  line-height: 1.6;
+  display: block;
+}
+
+

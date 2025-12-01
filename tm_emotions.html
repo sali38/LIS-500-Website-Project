@@ -1,0 +1,184 @@
+<!-- tm_emotions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotion Classifier – LIS 500 Project 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header class="bg-light p-3">
+    <nav>
+      <ul class="container navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tech_heroes.html">Tech Heroes</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="tm_emotions.html" aria-current="page">Emotion ML Demo</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <h1>Emotion Classifier – Teachable Machine</h1>
+      <p>
+        For Project 3, we built a small <strong>image-based emotion classifier</strong> using Google’s
+        Teachable Machine. Our goal is not just to “make AI work,” but to use this tiny model to think
+        about <strong>power, bias, and digital surveillance</strong> in the spirit of Joy Buolamwini’s
+        <em>Unmasking AI</em> and our Tech Heroes.
+      </p>
+
+      <!-- HOW TO USE -->
+      <section>
+        <h2>Try the Demo</h2>
+        <p>
+          When the model is connected, this page will use your webcam to try to recognize four basic
+          facial expressions:
+          <strong>happy, sad, angry, and surprised</strong>.
+        </p>
+        <p>
+          This section will be activated once our trained model is exported from Teachable Machine.
+        </p>
+
+        <div style="text-align:center; margin:18px 0;">
+          <button id="startButton">Start Webcam &amp; Model</button>
+          <button id="stopButton">Stop</button>
+        </div>
+
+        <div style="text-align:center;">
+          <video id="webcam" width="320" height="240" autoplay playsinline style="border-radius:10px; border:1px solid #e6efe6;"></video>
+          <p style="margin-top:10px;">
+            <strong>Prediction:</strong>
+            <span id="predictionLabel">waiting for model…</span>
+          </p>
+        </div>
+
+        <p class="source">
+          Note: This demo runs entirely in your browser using TensorFlow.js. No video is saved or sent
+          to a server; all classification happens locally on your device.
+        </p>
+      </section>
+
+      <!-- WHY EMOTIONS + TECH HEROES -->
+      <section>
+        <h2>Why Emotions? Connecting to Our Tech Heroes</h2>
+        <p>
+          Emotion recognition sounds playful, but similar ideas are already used in workplaces and
+          classrooms to judge whether people are “engaged” or “motivated.” We wanted to imagine how our
+          small project might look through the eyes of our Tech Heroes:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Ifeoma Ozoma</strong> exposed racism and retaliation inside large tech companies.
+            If our classifier were used to score students or workers, who would be able to question the
+            labels? How would whistleblowers push back when a “neutral” face is misread as
+            “unmotivated” or “angry”?
+          </li>
+          <li>
+            <strong>Dorothy Vaughan</strong> was an early NASA programmer who navigated both racism and
+            sexism while working with code and computation. Thinking with Dorothy reminds us that
+            <strong>algorithms are human decisions written into math</strong>. Our choices about labels,
+            data collection, and thresholds all embed our own assumptions.
+          </li>
+          <li>
+            <strong>Jamie Gong</strong> builds technology around care work for families and older
+            adults. Her example pushes us to ask: could an emotion-recognition tool support
+            <em>self-reflection and care</em> instead of surveillance? What would it mean to design this
+            system for the person in front of the camera, not the institution watching them?
+          </li>
+        </ul>
+      </section>
+
+      <!-- DATA & TRAINING -->
+      <section>
+        <h2>How We Train the Model</h2>
+        <p>
+          We are currently preparing our dataset in Teachable Machine. Our plan is to:
+        </p>
+        <ul>
+          <li>Use <strong>four classes</strong>: happy, sad, angry, and surprised.</li>
+          <li>Collect examples from <strong>all three group members</strong>, not just one face.</li>
+          <li>
+            Vary lighting, camera distance, and background so the model does not only work in a single
+            “perfect” setup.
+          </li>
+          <li>
+            Keep expressions realistic (the kind of faces students actually make in class), not just
+            exaggerated cartoon faces.
+          </li>
+        </ul>
+        <p>
+          After collecting the examples, Teachable Machine will convert the short video clips into
+          image frames and train a model. We will then <strong>export the model to TensorFlow.js</strong>
+          and connect it to this page through a small JavaScript file.
+        </p>
+      </section>
+
+      <!-- UNMASKING AI LINKS -->
+      <section>
+        <h2>Lessons from <em>Unmasking AI</em></h2>
+        <p>
+          Joy Buolamwini shows how commercial facial analysis systems often perform worst on
+          darker-skinned women, turning them into “error” cases while lighter-skinned men are treated
+          as the default face. While building this project, we are keeping several of her lessons in
+          mind:
+        </p>
+        <ul>
+          <li>
+            <strong>Data is never neutral.</strong> If we only use one person’s face, the model will be
+            tuned to that one identity and may misread others.
+          </li>
+          <li>
+            <strong>Labels are decisions, not facts.</strong> Our definitions of “happy,” “sad,” or
+            “angry” come from our own culture and experiences.
+          </li>
+          <li>
+            <strong>Accuracy is not the same as fairness.</strong> Even if the model looks confident on
+            our test data, it may still be unfair or harmful in other contexts.
+          </li>
+        </ul>
+        <p>
+          By treating this assignment as a small, low-stakes experiment, we can better understand why
+          large-scale facial recognition systems need strong accountability, diverse data, and clear
+          limits on how they are used.
+        </p>
+      </section>
+
+      <!-- LIMITATIONS -->
+      <section>
+        <h2>Limitations & Open Questions</h2>
+        <p>
+          This demo is meant for learning, not for making real decisions about people. We expect the
+          model to:
+        </p>
+        <ul>
+          <li>Work best on the three creators and less reliably on people with different features.</li>
+          <li>Struggle in low light, extreme brightness, or unusual camera angles.</li>
+          <li>
+            Confuse subtle expressions that fall between two labels (for example, a tired smile vs.
+            neutral).
+          </li>
+        </ul>
+        <p>
+          These limitations echo Joy Buolamwini’s warning that AI systems often fail hardest on the
+          people who are already marginalized. Our project is a reminder that <strong>building AI
+          always means making choices about whose faces, emotions, and stories are centered</strong>.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="container">
+    <p>Made by LIS500 Project Group 1🍈</p>
+  </footer>
+
+  <!-- Placeholder script: you will connect your exported Teachable Machine model here -->
+  <script src="tm_emotion.js"></script>
+</body>
+</html>

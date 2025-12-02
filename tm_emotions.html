@@ -6,6 +6,10 @@
   <title>Emotion Classifier – LIS 500 Project 3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Teachable Machine / TensorFlow.js 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 
 <body>
@@ -36,12 +40,11 @@
       <section>
         <h2>Try the Demo</h2>
         <p>
-          When the model is connected, this page will use your webcam to try to recognize four basic
-          facial expressions:
-          <strong>happy, sad, and angry</strong>.
+          This page uses your webcam and our Teachable Machine model to try to recognize three basic
+          facial expressions: <strong>happy, sad, and angry</strong>.
         </p>
         <p>
-          This section will be activated once our trained model is exported from Teachable Machine.
+          Click <strong>Start Webcam &amp; Model</strong> and, if prompted, allow camera access.
         </p>
 
         <div style="text-align:center; margin:18px 0;">
@@ -50,7 +53,8 @@
         </div>
 
         <div style="text-align:center;">
-          <video id="webcam" width="320" height="240" autoplay playsinline style="border-radius:10px; border:1px solid #e6efe6;"></video>
+          <video id="webcam" width="320" height="240" autoplay playsinline
+                 style="border-radius:10px; border:1px solid #e6efe6; background:#000;"></video>
           <p style="margin-top:10px;">
             <strong>Prediction:</strong>
             <span id="predictionLabel">waiting for model…</span>
@@ -98,24 +102,24 @@
       <section>
         <h2>How We Train the Model</h2>
         <p>
-          We are currently preparing our dataset in Teachable Machine. Our plan is to:
+          We trained our Teachable Machine model with:
         </p>
         <ul>
-          <li>Use <strong>Three classes</strong>: happy, sad, and angry.</li>
-          <li>Collect examples from <strong>all three group members</strong>, not just one face.</li>
+          <li><strong>Three classes</strong>: happy, sad, and angry.</li>
+          <li>Examples from <strong>all three group members</strong>, not just one face.</li>
           <li>
-            Vary lighting, camera distance, and background so the model does not only work in a single
-            “perfect” setup.
+            Different lighting, camera distance, and background so the model does not only work in a
+            single “perfect” setup.
           </li>
           <li>
-            Keep expressions realistic (the kind of faces students actually make in class), not just
+            Realistic expressions (the kind of faces students actually make in class), not just
             exaggerated cartoon faces.
           </li>
         </ul>
         <p>
-          After collecting the examples, Teachable Machine will convert the short video clips into
-          image frames and train a model. We will then <strong>export the model to TensorFlow.js</strong>
-          and connect it to this page through a small JavaScript file.
+          Teachable Machine converted our short video clips into image frames and trained the model.
+          We then <strong>exported the model to TensorFlow.js</strong> and connected it to this page
+          through the JavaScript below.
         </p>
       </section>
 
@@ -178,7 +182,7 @@
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 
-  <!-- Placeholder script: you will connect your exported Teachable Machine model here -->
+  <!-- JS: Teachable Machine 모델 연결 -->
   <script src="tm_emotion.js"></script>
 </body>
 </html>

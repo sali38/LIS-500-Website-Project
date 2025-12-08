@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <title>Tech Heroes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />  <!-- Links to style sheet/css-->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Navigation that has all page links -->
-  <header class="container">
-    <nav aria-label="Primary">
+  <!-- 🟢 Unified Navigation -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Primary">
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="tech_heroes.html">Tech Heroes</a></li>
+        <li><a href="tech_heroes.html" aria-current="page" class="active">Tech Heroes</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="tm_emotions.html">Emotion ML Demo</a></li> 
         <li><a href="about_us.html">About Us</a></li>
@@ -20,24 +21,23 @@
     </nav>
   </header>
 
-  <!-- Main info for all tech heros -->
-  <main id="content" class="container">
+  <main id="content" class="container page-content">
     <article class="card">
       <h1>Our Tech Heroes</h1>
-      <p>Each of our team members chose a Tech Hero who inspires us in different ways. Explore their stories:</p>
-            <!-- buttons for tech heros to take user to each main tech hero page-->
+      <p>Each team member selected a Tech Hero who inspires us through advocacy, computing, and equitable innovation.</p>
+
       <div class="hero-grid" role="list">
-        <a class="hero-btn" role="listitem" href="ifeoma.html">
+        <a class="hero-btn" href="ifeoma.html" role="listitem">
           <span class="hero-title">Ifeoma Ozoma</span>
           <span class="hero-sub">Whistleblower • Tech Worker Handbook</span>
         </a>
 
-        <a class="hero-btn" role="listitem" href="dorothy.html">
+        <a class="hero-btn" href="dorothy.html" role="listitem">
           <span class="hero-title">Dorothy Vaughan</span>
           <span class="hero-sub">NASA Mathematician • Early AI Programmer</span>
         </a>
 
-        <a class="hero-btn" role="listitem" href="jamie.html">
+        <a class="hero-btn" href="jamie.html" role="listitem">
           <span class="hero-title">Jamie Gong</span>
           <span class="hero-sub">CareHero • Tech for Senior Care</span>
         </a>
@@ -45,12 +45,8 @@
     </article>
   </main>
 
-  <!-- Footer for style and to tie page together -->
-  <footer class="container">
+  <footer class="footer">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 </body>
 </html>
-
-
-

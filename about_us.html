@@ -3,32 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Project 3 LIS: 500</title>
-  <link rel="stylesheet" href="style.css"> <!-- Links to style sheet/CSS-->
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <!-- Navigation Bar has all links to other pages -->
-  <header class="bg-light p-3">
-    <nav>
-      <ul class="container navigation">
+  <header class="site-header">
+    <nav class="navbar container">
+      <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="tech_heroes.html">Tech Heroes</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="tm_emotions.html">Emotion ML Demo</a></li> 
-        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="tm_emotions.html">Emotion ML Demo</a></li>
+        <li><a href="about_us.html" aria-current="page" class="active">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content of intro to members -->
-  <main class="container">
+  <main class="container page-content">
     <article class="card">
-      <h1 style="text-align:center;">About Us</h1>
+      <h1 class="page-title">About Us</h1>
       <p>This page introduces the members of Project #3 Website – LIS 500 | Group 1.</p>
-            <!-- Each grid hold info about members and their tech heros-->
-      <div class="about-grid" role="list">
 
+      <div class="about-grid" role="list">
         <div class="about-card" role="listitem">
           <p><b>Samira Ali</b></p>
           <p><small>
@@ -36,7 +33,7 @@
             <b>Hometown:</b> Apple Valley, Minnesota <br>
             <b>Major(s):</b> Information Science and Data Science <br>
             <b>Year:</b> Junior <br>
-            <b>Tech Hero and/or Tech Thing:</b> Jamie Gong, because she is the founder and CEO of Care Hero, an app that matches families with caregivers for their older family members. The app prioritizes different companionship options and offers culturally sensitive care, and I really appreciate its focus on ease and efficiency for families.
+            <b>Tech Hero:</b> Jamie Gong — founder & CEO of Care Hero.
           </small></p>
           <a href="jamie.html" class="hero-btn">Samira's Tech Hero</a>
         </div>
@@ -48,7 +45,7 @@
             <b>Hometown:</b> Seoul, South Korea <br>
             <b>Major(s):</b> Information Science and Data Science <br>
             <b>Year:</b> Senior <br>
-            <b>Tech Hero and/or Tech Thing:</b> Ifeoma Ozoma, because she exposed racism and gender discrimination in big tech companies and fought for legal protections through the Silenced No More Act. Her advocacy turned personal struggles into structural change, which I find deeply admirable.
+            <b>Tech Hero:</b> Ifeoma Ozoma — Silenced No More Act advocate.
           </small></p>
           <a href="ifeoma.html" class="hero-btn">Yunji's Tech Hero</a>
         </div>
@@ -61,25 +58,16 @@
             <b>Major(s):</b> Information Science and Communication Arts <br>
             <b>Certificate:</b> Digital Studies <br>
             <b>Year:</b> Senior <br>
-            <b>Tech Hero and/or Tech Thing:</b> I admire Dorothy Vaughan, because she was such a talented figure in the world of mathematics, and accomplished historic feats all while facing both racism and sexism. Her career in NASA and her advocacy for women is incredibly inspiring to look back on. 
+            <b>Tech Hero:</b> Dorothy Vaughan — NASA mathematician.
           </small></p>
           <a href="dorothy.html" class="hero-btn">Ellah's Tech Hero</a>
         </div>
-
       </div>
     </article>
   </main>
 
-  <!-- Footer for style and to tie page together -->
-  <footer class="container">
+  <footer class="footer">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-

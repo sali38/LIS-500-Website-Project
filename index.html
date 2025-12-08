@@ -3,39 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>LIS 500 Project</title>
-  <link rel="stylesheet" href="style.css"> <!-- Links to style sheet/CSS-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="bg-light p-3">
-    <!-- Naviagtion with links to all pages-->
-    <nav>
-      <ul class="container navigation">
-        <li><a href="index.html">Home</a></li>
+  <header class="site-header">
+    <nav class="navbar container">
+      <ul class="navigation">
+        <li><a href="index.html" aria-current="page" class="active">Home</a></li>
         <li><a href="tech_heroes.html">Tech Heroes</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="tm_emotions.html">Emotion ML Demo</a></li> 
+        <li><a href="tm_emotions.html">Emotion ML Demo</a></li>
         <li><a href="about_us.html">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- card with all website content and brief description-->
+  <main class="container page-content">
     <article class="card">
-      <h1 style="text-align:center;">First Stop</h1>
-      <h2 style="text-align:center;">Website Content</h2>
+      <h1 class="page-title">Welcome</h1>
+      <h2 class="subtitle">Website Overview</h2>
+
       <ol>
-        <li>Tech Heroes: Those who have inspired us within the tech industry</li>
-        <li>Resource Page: A guide to discussing intersectionality and bias</li>
-        <li>Emotion ML Demo: Our Teachable Machine and related content</li>
-        <li>About Group 1: A page dedicated to the web developers</li>
+        <li>Tech Heroes — people who inspire us in computing</li>
+        <li>Resources — intersectionality & bias learning tools</li>
+        <li>Emotion ML Demo — our Teachable Machine model</li>
+        <li>About Us — meet the team behind this website</li>
       </ol>
     </article>
   </main>
-<!-- footer for style and to tie page together-->
-  <footer class="container">
+
+  <footer class="footer">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 </body>

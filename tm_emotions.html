@@ -7,41 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Teachable Machine / TensorFlow.js libraries -->
+  <!-- Teachable Machine / TensorFlow.js -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 
 <body>
-  <!-- Navigation -->
-  <header class="bg-light p-3">
-    <nav>
-      <ul class="container navigation">
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="tech_heroes.html">Tech Heroes</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="tm_emotions.html" aria-current="page">Emotion ML Demo</a></li>
+        <li><a href="tm_emotions.html" aria-current="page" class="active">Emotion ML Demo</a></li>
         <li><a href="about_us.html">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
+
+  <!-- MAIN CONTENT -->
+  <main class="container page-content">
     <article class="card">
-      <h1>Emotion Classifier – Teachable Machine</h1>
+
+      <h1 class="page-title">Emotion Classifier – Teachable Machine</h1>
       <p>
-        For Project 3, we built a small <strong>image-based emotion classifier</strong> using Google’s
-        Teachable Machine. Our goal is not just to “make AI work,” but to use this tiny model to think
-        about <strong>power, bias, and digital surveillance</strong> in the spirit of Joy Buolamwini’s
-        <em>Unmasking AI</em> and our Tech Heroes.
+        This page demonstrates a <strong>webcam-based emotion classifier</strong> trained with Google 
+        Teachable Machine. It detects three facial expressions: 
+        <b>Happy · Sad · Angry.</b><br>
+        No images or recordings are saved—everything runs <strong>locally in your browser</strong>.
       </p>
 
-      <!-- Direct link button to Teachable Machine model -->
-      <div style="text-align:center; margin: 10px 0 22px;">
+      <!-- Open Model Button -->
+      <div class="center-block" style="margin-top:16px;">
         <a class="hero-btn"
            href="https://teachablemachine.withgoogle.com/models/Bn6RjZdcH/"
-           target="_blank"
-           rel="noopener">
+           target="_blank" rel="noopener">
           Open Our Teachable Machine Model
         </a>
       </div>
@@ -49,262 +51,107 @@
       <!-- HOW TO USE -->
       <section>
         <h2>Try the Demo</h2>
-        <p>
-          This page uses your webcam and our Teachable Machine model to try to recognize three basic
-          facial expressions: <strong>happy, sad, and angry</strong>.
-        </p>
-        <p>
-          Click <strong>Start Webcam &amp; Model</strong> and, if prompted, allow camera access.
-        </p>
+        <p>Click Start, allow camera access, and watch the prediction update in real time!</p>
 
-        <div style="text-align:center; margin:18px 0;">
+        <div class="center-block" style="margin:18px 0;">
           <button id="startButton">Start Webcam &amp; Model</button>
           <button id="stopButton">Stop</button>
         </div>
 
-        <div style="text-align:center;">
+        <div class="center-block">
           <video id="webcam" width="320" height="240" autoplay playsinline
-                 style="border-radius:10px; border:1px solid #e6efe6; background:#000;"></video>
+            style="border-radius:10px;border:1px solid #ddd;background:#000;"></video>
+
           <p style="margin-top:10px;">
-            <strong>Prediction:</strong>
-            <span id="predictionLabel">waiting for model…</span>
+            <strong>Prediction:</strong> <span id="predictionLabel">waiting…</span>
           </p>
         </div>
 
-        <p class="source">
-          Note: This demo runs entirely in your browser using TensorFlow.js. No video is saved or sent
-          to a server; all classification happens locally on your device.
+        <p class="source" style="margin-top:12px;">
+          *Runs entirely client-side with TensorFlow.js — no data sent to a server.
         </p>
       </section>
 
-      <!-- WHY EMOTIONS + TECH HEROES -->
+
+      <!-- WHY EMOTIONS - HERO CONNECTION -->
       <section>
         <h2>Why Emotions? Connecting to Our Tech Heroes</h2>
         <p>
-          Emotion recognition sounds playful, but similar ideas are already used in workplaces and
-          classrooms to judge whether people are “engaged” or “motivated.” We wanted to imagine how our
-          small project might look through the eyes of our Tech Heroes:
+          Emotion recognition tools already appear in workplaces, classrooms, 
+          and surveillance systems. Our Tech Heroes helped us think critically about this:
         </p>
 
         <ul>
-          <li>
-            <strong>Ifeoma Ozoma</strong> exposed racism and retaliation inside large tech companies.
-            If our classifier were used to score students or workers, who would be able to question the
-            labels? How would whistleblowers push back when a “neutral” face is misread as
-            “unmotivated” or “angry”?
-          </li>
-          <li>
-            <strong>Dorothy Vaughan</strong> was an early NASA programmer who navigated both racism and
-            sexism while working with code and computation. Thinking with Dorothy reminds us that
-            <strong>algorithms are human decisions written into math</strong>. Our choices about labels,
-            data collection, and thresholds all embed our own assumptions.
-          </li>
-          <li>
-            <strong>Jamie Gong</strong> builds technology around care work for families and older
-            adults. Her example pushes us to ask: could an emotion-recognition tool support
-            <em>self-reflection and care</em> instead of surveillance? What would it mean to design this
-            system for the person in front of the camera, not the institution watching them?
-          </li>
+          <li><strong>Ifeoma Ozoma</strong> reminds us that workers need protection against retaliation and unfair scoring.</li>
+          <li><strong>Dorothy Vaughan</strong> shows that algorithms mirror the humans who build them — not neutral by default.</li>
+          <li><strong>Jamie Gong</strong> challenges us to ask whether tech can support care rather than control.</li>
         </ul>
       </section>
 
-      <!-- DATA & TRAINING -->
+
+      <!-- HOW WE TRAINED -->
       <section>
         <h2>How We Trained the Model</h2>
-        <p>
-          We trained our Teachable Machine model with:
-        </p>
         <ul>
-          <li><strong>Three classes</strong>: happy, sad, and angry.</li>
-          <li>Examples from <strong>all three group members</strong>, not just one face.</li>
-          <li>
-            Different lighting, camera distance, and background so the model does not only work in a
-            single “perfect” setup.
-          </li>
-          <li>
-            Realistic expressions (the kind of faces students actually make in class), not just
-            exaggerated cartoon faces.
-          </li>
+          <li><strong>Three classes:</strong> happy, sad, angry</li>
+          <li>Training data from <strong>all members</strong> (diversity reduces bias)</li>
+          <li>Different lighting/backgrounds to improve generalization</li>
+          <li>Realistic expressions rather than exaggerated cartoon emotions</li>
         </ul>
-        <p>
-          Teachable Machine converted our short video clips into image frames and trained the model.
-          We then <strong>exported the model to TensorFlow.js</strong> and connected it to this page
-          through the JavaScript below.
-        </p>
+        <p>Videos -> image frames -> TensorFlow.js model export -> integrated into this webpage.</p>
       </section>
 
-      <!-- UNMASKING AI LINKS -->
-      <section>
-        <h2>Lessons from <em>Unmasking AI</em></h2>
-        <p>
-          Joy Buolamwini shows how commercial facial analysis systems often perform worst on
-          darker-skinned women, turning them into “error” cases while lighter-skinned men are treated
-          as the default face. While building this project, we are keeping several of her lessons in
-          mind:
-        </p>
-        <ul>
-          <li>
-            <strong>Data is never neutral.</strong> If we only use one person’s face, the model will be
-            tuned to that one identity and may misread others.
-          </li>
-          <li>
-            <strong>Labels are decisions, not facts.</strong> Our definitions of “happy,” “sad,” or
-            “angry” come from our own culture and experiences.
-          </li>
-          <li>
-            <strong>Accuracy is not the same as fairness.</strong> Even if the model looks confident on
-            our test data, it may still be unfair or harmful in other contexts.
-          </li>
-        </ul>
-        <p>
-          By treating this assignment as a small, low-stakes experiment, we can better understand why
-          large-scale facial recognition systems need strong accountability, diverse data, and clear
-          limits on how they are used.
-        </p>
-      </section>
 
-      <!-- PROJECT STATEMENT (COLLAPSIBLE) -->
+      <!-- COLLAPSIBLE PROJECT STATEMENT -->
       <section>
         <h2>Project Statement</h2>
+
         <details>
-          <summary style="cursor:pointer; font-weight:600;">
-            Click to read our full project statement
-          </summary>
+          <summary style="cursor:pointer;font-weight:600;">Click to read our full project statement</summary>
           <div style="margin-top:12px;">
             <p>
-              For our team, we were able to take away several lessons from computer scientist and AI
-              researcher Dr. Joy Buolamwini’s book <em>Unmasking AI</em>. Such lessons have allowed us
-              to better create our final project, so that we can avoid past mistakes and create an
-              outcome that is equitable for all, not just for some.
+              Our project draws inspiration from <strong>Joy Buolamwini’s "Unmasking AI"</strong>, emphasizing the biases embedded within facial recognition technologies. Buolamwini's work demonstrates how systems fail disproportionately on darker-skinned women — a reminder that <strong>data is political</strong>, not neutral.
             </p>
             <p>
-              This being said, each of us will share a few lessons that have resonated with us from
-              Dr. Buolamwini’s book.
+              As a team, we reflected on how systems misrepresent marginalized identities. Samira highlighted misidentification of historical Black women, Yunji emphasized the right to biometric privacy, and Ellah focused on structural bias within early AI systems.
             </p>
             <p>
-              For Samira, a lesson that resonated the most is that technology, especially in regard to
-              artificial intelligence facial recognition, is that these systems are never neutral. It is
-              no coincidence that racism and biases just appear, for example, in the mis-gendering of
-              prominent Civil Rights activist Sojourner Truth through the usage of said facial
-              recognition. This goes much deeper than just a simple misidentification of a historical
-              figure. What Truth and so many others have accomplished and have endured just to be
-              misgendered and/or misidentified by technology that is programmed by humans and thus
-              should know how to properly identify notable figures evidently shows such non-neutral
-              technologies.
+              Our ML demo uses three emotions — happiness, sadness, and anger — chosen for universality while recognizing they appear differently across people and cultures. We used <strong>multiple faces, angles, and conditions</strong> to avoid overfitting to one identity.
             </p>
             <p>
-              Yunji included the lesson of the fight to maintain privacy to one’s biometric information,
-              specifically in regard to one’s home government and governments around the world. Nation’s
-              governments have the job to protect its citizens in more ways than one, especially when
-              one’s information is threatened to be stolen. Along with this, not only should governments
-              around the world be protecting its citizens digitally from harm, but said governments
-              should also be holding those looking to cause harm responsible. To ensure this occurs, we
-              must continue to demand local, state, and the federal government to protect our rights so
-              everyone’s information is safe and secure.
-            </p>
-            <p>
-              And for Ellah, similarly to Samira’s, the idea that AI facial recognition was only able to
-              correctly identify those with light skin really stood out to her. Not only was this action
-              clearly troubling, but something that is even more frightening is that companies want to
-              continue to move forward with facial recognition technologies like in Dr. Buolamwini’s
-              “Dream Mirror Project,” despite clear evidence of racial biases present, specifically in
-              regard to those with dark skin. This being said, it is not only crucial for those who are
-              joining the tech industry to work to dismantle racism and racial biases within the
-              industry, but also to stand up to the already existing companies that enforce products
-              with embedded racism and racial biases.
-            </p>
-            <p>
-              After reading <em>Unmasking AI</em>, we all came to the same conclusion: we must keep the
-              lessons taught by Dr. Buolamwini within our minds not only in the present, but far into
-              our futures as well. Since technology, artificial intelligence, and other systems will
-              only continue to grow for the rest of our lives, we as programmers, professionals, and
-              consumers of technology must work to better everyone, not just for a select few. Just as
-              Dr. Buolamwini notes, artificial intelligence should not cease to exist, but rather
-              stereotypes and harmful assumptions that are programmed into it should no longer exist. We
-              must continue to strive for a future where the systems we have in place now are more
-              equitable.
-            </p>
-            <p>
-              Moreover, when creating our teachable machine, we chose to teach our machine three common
-              human emotions, these being happiness, sadness, and anger. These emotions were chosen
-              because, though able to be shown differently person-to-person, overall tend to be
-              universal in a basic form. For many, happiness can be equated with someone smiling,
-              sadness with crying, and anger with furrowed brows and maybe one using an elevated voice.
-              However, as we have learned from Dr. Buolamwini, simply using these emotions based on one
-              person's data can be unhelpful, it would narrow down what our model could recognize. We
-              kept in mind that this is how discriminatory systems are able to be created, and tried to
-              widen our dataset.
-            </p>
-            <p>
-              Tying this understanding of emotions with our lessons from Dr. Buolamwini, we from the
-              beginning made it our goal for our machine to recognize the aforementioned emotions from
-              multiple groups of people, rather than just one person or one group of people. Programming
-              biases and discrimination into technology is something that is done by humans, and
-              therefore is something that needs to be undone by humans as well, which is why this lesson
-              stood out so much to us when creating our machine.
-            </p>
-            <p>
-              Our teachable machine is just one drop in the large ocean of technology that has been
-              embedded with racism, biases, and many other forms of discrimination. Despite this,
-              however, through projects like ours, those within our class, and others across universities
-              and companies around the world, our collective fight and learned knowledge of how
-              discrimination is designed within our technology only makes us stronger. We are more aware
-              of how to program out these harmful designs, and how crucial it is for people from all
-              walks of life to be a part of creation and design of technology, especially in regard to
-              artificial intelligence.
-            </p>
-            <p>
-              It is also important to note that this is a continued process, not a one time fix.
-              Programmers may initially create these biased technologies unintentionally, however the
-              harm they cause is still significant and disproportionately affects marginalized
-              communities. <em>Unmasking AI</em> has taught us that it is crucial to ask how a system or
-              technology thought to be neutral affects all communities. That is why for our project we
-              hope to test and train our model on multiple different faces, and discuss how accurate it
-              is on picking up what emotion is being portrayed. It is important to compare what emotions
-              the machine struggled to pick up, if it was not picking up emotions accurately on a
-              specific person. We also were making note of other smaller factors that could introduce
-              bias into our project as well.
-            </p>
-            <p>
-              All of this being said, we hope that you enjoy browsing our website and interacting with
-              our teachable machine, and that you are doing everything possible to help artificial
-              intelligence, and technology as a whole, now and into the future become programmed without
-              discrimination and is representative of the world as a whole, not just for a select few.
+              This project is small-scale, but it represents our commitment to equitable, socially informed AI design. Technology should serve people — not the other way around.
             </p>
           </div>
         </details>
       </section>
 
+
       <!-- LIMITATIONS -->
       <section>
-        <h2>Limitations &amp; Open Questions</h2>
-        <p>
-          This demo is meant for learning, not for making real decisions about people. We expect the
-          model to:
-        </p>
+        <h2>Limitations & Open Questions</h2>
         <ul>
-          <li>Work best on the three creators and less reliably on people with different features.</li>
-          <li>Struggle in low light, extreme brightness, or unusual camera angles.</li>
-          <li>
-            Confuse subtle expressions that fall between two labels (for example, a tired smile vs.
-            neutral).
-          </li>
+          <li>Best performance on the three creators; may fail on unfamiliar faces</li>
+          <li>Lighting and angle strongly affect predictions</li>
+          <li>Complex or subtle expressions are difficult to classify</li>
         </ul>
         <p>
-          These limitations echo Joy Buolamwini’s warning that AI systems often fail hardest on the
-          people who are already marginalized. Our project is a reminder that <strong>building AI
-          always means making choices about whose faces, emotions, and stories are centered</strong>.
+          The goal is not accuracy, but <strong>critical reflection</strong> on how 
+          emotion recognition technology is used — 
+          and misused — in real institutions.
         </p>
       </section>
 
     </article>
   </main>
 
-  <footer class="container">
+
+  <!-- FOOTER-->
+  <footer class="footer">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 
-  <!-- JS: Teachable Machine model connection -->
+
+  <!-- JavaScript connecting the model -->
   <script src="tm_emotion.js"></script>
 </body>
 </html>

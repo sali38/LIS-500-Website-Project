@@ -1,28 +1,44 @@
-/* layout tweaks */
-.container { 
-  max-width: 880px; 
-  margin-inline: auto; 
-  padding: 20px; 
+/* ===============================
+   BASE + LAYOUT
+================================= */
+
+html { 
+  scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #1f2a1f;
+  background: #f8fbf7;
+  font: 16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Emoji;
+}
+
+/* container width expanded so layout feedback 반영 */
+.container { 
+  width: min(92%, 1020px);
+  margin-inline: auto; 
+  padding: 20px;
+}
+
+/* 페이지 내용이 footer를 밀도록 */
+.page-content { flex: 1; }
+
+/* cards */
 .card {
   background: #fff;
   border: 1px solid #e6efe6;
   border-radius: 14px;
   padding: 22px;
-  box-shadow: 0 8px 18px rgba(30, 40, 30, .08);
-  margin-bottom: 20px;       
+  box-shadow: 0 8px 18px rgba(30,40,30,.08);
+  margin-bottom: 26px;       
 }
 
-/* typography */
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  color: #1f2a1f;
-  background: #f8fbf7;
-  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
-}
+/* ===============================
+   TYPOGRAPHY
+================================= */
 
 h1, h2, h3 { 
   line-height: 1.25; 
@@ -35,117 +51,144 @@ h1 {
 }
 
 h2 { 
-  text-align: center;       
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: .8rem;
 }
 
-p { 
-  margin: .5rem 0 1rem; 
+p { margin: .5rem 0 1rem; }
+
+/* ===============================
+   NAVIGATION (header 스타일 개선)
+================================= */
+
+.site-header {
+  background:#eef8f0;
+  border-bottom:1px solid #dcefe1;
+  padding:14px 0;
+  box-shadow:0 4px 10px rgba(0,0,0,.03);
+  position: sticky;
+  top:0;
+  z-index:10;
 }
 
-/* navigation bar style/hover */
-.navigation {
-  list-style: none; 
-  margin: 0; 
-  padding: 0;
-  display: flex; 
-  gap: 10px; 
-  flex-wrap: wrap;
-  justify-content: center;   
+/* navbar 정렬 통일 */
+.navbar ul.navigation {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
 .navigation a {
   display: inline-block;
-  padding: .56rem .9rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  color: #113a1f;
-  background: #cfead6;              
-  border: 1px solid #b9dec1;
-  transition: transform .06s ease, background-color .15s ease, border-color .15s ease;
-  box-shadow: 0 6px 16px rgba(30,40,30,.06);
+  padding:.56rem .9rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  color:#113a1f;
+  background:#cfead6;              
+  border:1px solid #b9dec1;
+  transition:.15s ease;
+  box-shadow:0 6px 16px rgba(30,40,30,.06);
 }
 
 .navigation a:hover { 
   transform: translateY(-1px); 
-  background: #bfe2c8; 
-  border-color: #aad5b4; 
+  background:#bfe2c8; 
+  border-color:#aad5b4; 
 }
 
-.navigation a:active { 
-  transform: translateY(0); 
+.navigation a:active { transform: translateY(0); }
+
+.navigation a[aria-current="page"],
+.navigation a.active {
+  background:#ffffff;
+  border-color:#9dd4a9;
+  color:#1c6a34;
 }
 
-.navigation a[aria-current="page"] {
-  background: #ffffff;
-  border-color: #9dd4a9;
-  color: #1c6a34;
-}
+/* ===============================
+   BLOCKS / CALLOUTS
+================================= */
 
-/* quote / source blocks */
 .quote {
-  margin: .2rem 0 1rem; 
-  padding: .75rem .95rem;
-  border: 1px dashed #e5efe5; 
-  border-radius: 10px; 
-  background: #fff; 
-  font-style: italic;
+  margin:.2rem 0 1rem; 
+  padding:.75rem .95rem;
+  border:1px dashed #e5efe5; 
+  border-radius:10px; 
+  background:#fff; 
+  font-style:italic;
 }
 
 .quote cite { 
-  display: block; 
-  margin-top: .35rem; 
-  font-style: normal; 
-  color: #5c6e5c; 
-  font-size: .95rem; 
+  display:block; 
+  margin-top:.35rem; 
+  font-style:normal; 
+  color:#5c6e5c; 
+  font-size:.95rem; 
 }
 
 .source {
-  margin-top: 16px; 
-  padding: 10px 12px;
-  border: 1px dashed #e5efe5; 
-  border-radius: 10px;
-  color: #5c6e5c;
-  background: linear-gradient(135deg, rgba(123, 207, 135, .10), transparent);
+  margin-top:16px; 
+  padding:10px 12px;
+  border:1px dashed #e5efe5; 
+  border-radius:10px;
+  color:#5c6e5c;
+  background:linear-gradient(135deg,rgba(123,207,135,.10),transparent);
 }
 
-/* hero media */
+/* hero images */
 .hero-img {
-  max-width: 600px; 
-  height: auto;
-  border-radius: 10px; 
-  border: 1px solid #e6efe6; 
-  margin: .5rem 0 1rem;
+  max-width:600px; 
+  height:auto;
+  border-radius:10px; 
+  border:1px solid #e6efe6; 
+  margin:.5rem 0 1rem;
 }
 
-/* footer */
+/* ===============================
+   FOOTER (always bottom)
+================================= */
+
 footer {
-  color: #5b6e5b;
-  border-top: 1px solid #e6efe6;
-  margin-top: 28px; 
-  padding-top: 14px;
-  font-size: .95rem;
-  text-align: center;     /* footer */
+  color:#5b6e5b;
+  border-top:1px solid #e6efe6;
+  padding:14px 0;
+  font-size:.95rem;
+  text-align:center;    
+  background:#f4faf5;
+  margin-top:auto;
 }
 
-/* focus/keyboard */
+/* ===============================
+   ACCESSIBILITY
+================================= */
+
 :focus-visible {
-  outline: 2px solid #6cc78a;
-  outline-offset: 3px;
-  border-radius: 6px;
+  outline:2px solid #6cc78a;
+  outline-offset:3px;
+  border-radius:6px;
 }
 
-/* reduced motion */
+/* reduce animation for accessibility */
 @media (prefers-reduced-motion: reduce) {
   * { 
-    animation: none !important; 
-    transition: none !important; 
+    animation:none !important; 
+    transition:none !important; 
   }
 }
-/* grids/buttons for hero pages */
+
+/* ===============================
+   GRIDS + BUTTONS
+================================= */
+
 .hero-grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:14px;
   margin-top:12px;
 }
@@ -159,7 +202,7 @@ footer {
   border:1px solid #e6efe6;
   box-shadow:0 8px 18px rgba(30,40,30,.08);
   color:#113a1f;
-  transition:transform .06s ease, box-shadow .15s ease, border-color .15s ease;
+  transition:transform .06s ease,box-shadow .15s ease,border-color .15s ease;
 }
 
 .hero-btn:hover{
@@ -180,37 +223,31 @@ footer {
   color:#5c6e5c;
 }
 
-/* about us grid */
+/* ===============================
+   ABOUT US CARDS
+================================= */
+
 .about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:20px;
 }
 
-/* Individual Team Member Cards */
 .about-card {
-  background: #ffffff;
-  border: 1px solid #e6efe6;
-  border-radius: 14px;
-  padding: 18px 20px;
-  box-shadow: 0 6px 16px rgba(30, 40, 30, 0.06);
-  color: #1f2a1f;
-  transition: transform 0.1s ease;
+  background:#ffffff;
+  border:1px solid #e6efe6;
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:0 6px 16px rgba(30,40,30,0.06);
+  color:#1f2a1f;
+  transition:transform .1s ease,box-shadow .18s ease;
 }
 
 .about-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(30, 40, 30, 0.1);
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(30,40,30,.1);
 }
 
-.about-card p {
-  margin: 0 0 0.5rem;
-}
-
-.about-card small {
-  line-height: 1.6;
-  display: block;
-}
-
-
+.about-card p { margin:0 0 .55rem; }
+.about-card small { line-height:1.58; display:block; }

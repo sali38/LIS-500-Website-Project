@@ -8,56 +8,45 @@
 </head>
 
 <body>
-  <!-- 🔹 Unified Navigation -->
-  <header class="site-header">
-    <nav class="navbar container" aria-label="Primary Navigation">
-      <ul class="navigation">
+  <!-- 🔥 Header Navigation (통일된 구조 적용) -->
+  <header class="bg-light p-3">
+    <nav aria-label="Primary">
+      <ul class="container navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="tech_heroes.html" aria-current="page">Tech Heroes</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="tm_emotions.html">Emotion ML Demo</a></li> 
+        <li><a href="tm_emotions.html">Emotion ML Demo</a></li>
         <li><a href="about_us.html">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-
-  <!-- 🔸 Main -->
-  <main class="container page-content">
+  <main id="content" class="container">
     <article class="card">
-
       <h1>Our Tech Heroes</h1>
-      <p>
-        Each of our team members selected a Tech Hero who inspires us.  
-        Click to explore their stories and learn how they shaped technology and equity.
-      </p>
+      <p>Each of our team members chose a Tech Hero who inspires us in different ways. Explore their stories:</p>
 
       <div class="hero-grid" role="list">
-
-        <a class="hero-btn" role="listitem" href="ifeoma.html">
+        <a class="hero-btn" href="ifeoma.html" role="listitem">
           <span class="hero-title">Ifeoma Ozoma</span>
-          <span class="hero-sub">Whistleblower • Worker Rights • Equity</span>
+          <span class="hero-sub">Whistleblower • Tech Worker Handbook</span>
         </a>
 
-        <a class="hero-btn" role="listitem" href="dorothy.html">
+        <a class="hero-btn" href="dorothy.html" role="listitem">
           <span class="hero-title">Dorothy Vaughan</span>
-          <span class="hero-sub">NASA Mathematician • Early Programming</span>
+          <span class="hero-sub">NASA Mathematician • Early AI Programmer</span>
         </a>
 
-        <a class="hero-btn" role="listitem" href="jamie.html">
+        <a class="hero-btn" href="jamie.html" role="listitem">
           <span class="hero-title">Jamie Gong</span>
-          <span class="hero-sub">CareTech • Innovation & Inclusion</span>
+          <span class="hero-sub">CareHero • Tech for Senior Care</span>
         </a>
-
       </div>
-
     </article>
   </main>
 
-  <!-- 🔹 Footer -->
-  <footer class="footer">
+  <footer class="container">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
-
 </body>
 </html>

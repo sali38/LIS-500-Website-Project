@@ -8,134 +8,76 @@
 </head>
 
 <body>
-  <!-- 🔹 Unified Navigation -->
-  <header class="site-header">
-    <nav class="navbar container" aria-label="Primary Navigation">
-      <ul class="navigation">
+  <!-- 🔥 Header Navigation (통일 적용) -->
+  <header class="bg-light p-3">
+    <nav aria-label="Primary">
+      <ul class="container navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="tech_heroes.html">Tech Heroes</a></li>
         <li><a href="resources.html" aria-current="page">Resources</a></li>
-        <li><a href="tm_emotions.html">Emotion ML Demo</a></li> 
+        <li><a href="tm_emotions.html">Emotion ML Demo</a></li>
         <li><a href="about_us.html">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-
-  <!-- 🔸 Main -->
-  <main class="container page-content">
+  <main id="content" class="container">
     <article class="card">
-
       <h1>Resources</h1>
-      <p class="lead" style="text-align:center;">
-        A first-year-friendly starter kit on <strong>implicit bias</strong> and <strong>intersectionality</strong>.
-      </p>
 
-      <!-- Image -->
-      <div style="margin: 24px 0;">
+      <div style="margin-top:24px; margin-bottom:24px; text-align:center;">
         <img 
-          src="depositphotos_192723580-stock-photo-implicit-bias-word-cloud.jpg" 
-          alt="Word cloud graphic visualizing implicit bias concepts such as stereotypes and prejudice"
-          class="hero-img"
-          style="display:block; margin:auto;"
-        />
+          src="depositphotos_192723580-stock-photo-implicit-bias-word-cloud.jpg"
+          alt="Implicit Bias Word Cloud"
+          style="width:100%; max-width:600px; border-radius:10px;" />
       </div>
 
+      <p class="lead">A first-year-friendly starter kit on implicit bias & intersectionality.</p>
 
-      <!-- Section: Implicit Bias -->
       <section>
         <h2>Implicit Bias (IAT)</h2>
         <p>
-          Bias refers to preconceived notions or stereotypes. 
-          <em>Implicit bias</em> involves unconscious attitudes that shape our behavior without awareness.
+          Bias refers to preconceived notions or stereotypes. <em>Implicit</em> bias means
+          unconscious attitudes that shape our actions. The Harvard IAT offers multiple
+          tests—race, gender, age, weight, etc. Reflection matters more than score.
         </p>
-        <p>
-          Harvard’s <strong>Implicit Association Test (IAT)</strong> offers tests across race, gender, age,
-          weight and more — the value isn't the score itself, but the reflection that follows.
-        </p>
-        <p>
-          <a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank" rel="noopener">
-            Take the Harvard Implicit Bias Test →
-          </a>
-        </p>
+        <p><a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank">Take the IAT Test →</a></p>
       </section>
 
-
-      <!-- Section: Intersectionality -->
       <section>
         <h2>Defining Intersectionality</h2>
         <p>
-          Intersectionality analyzes how identity factors (gender, race, class, etc.) 
-          overlap to produce unique experiences of advantage or harm. 
-          According to Collins & Bilge, it's a tool for understanding 
-          “the complexity in the world, in people, and in human experiences.”
+          Intersectionality explains how identities (gender, race, class) overlap inside systems
+          of power. Not separate issues—compounded experiences.
         </p>
-
-        <div class="source">
-          In tech, overlapping barriers like cost, language, bandwidth, and workplace gatekeeping 
-          can compound to exclude users — design should account for these intersections.
-        </div>
+        <div class="note">In tech, barriers like language, cost, access can overlap and exclude.</div>
       </section>
 
-
-      <!-- Section: How They Intersect -->
       <section>
         <h2>How They Intersect</h2>
         <p>
-          Looking at implicit bias through an intersectional lens explains why individuals 
-          with overlapping marginalized identities often experience deeper harm. 
-          For instance, a Black woman in tech may encounter both racialized and gendered bias — 
-          not separately, but simultaneously.
+          Implicit bias + intersectionality helps explain why marginalized groups experience
+          amplified harm. A Black woman in tech faces both racial and gendered bias—not two issues,
+          but layered ones.
         </p>
       </section>
 
-
-      <!-- Section: Links for Further Learning -->
       <section>
         <h2>Quick Links</h2>
         <ul>
-          <li>
-            <a href="https://www.apa.org/topics/implicit-bias" target="_blank" rel="noopener">
-              APA – Implicit Bias Overview
-            </a>
-          </li>
-          <li>
-            <a href="https://www.beacon.org/assets/pdfs/whitefragilityreadingguide.pdf" target="_blank" rel="noopener">
-              Class Reading: *White Fragility*
-            </a>
-          </li>
-          <li>
-            <a href="https://womensstudies.colostate.edu/wp-content/uploads/sites/66/2021/06/Intersectionality-101.pdf" 
-               target="_blank" rel="noopener">
-              Intersectionality 101 – Colorado State University
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=OoBvzI-YZf4" target="_blank" rel="noopener">
-              Concepts Unwrapped: Implicit Bias (Video)
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=npNA-WcXPjw" target="_blank" rel="noopener">
-              DaJonaire Washington – Implicit Bias & Students (TED Talk)
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=akOe5-UsQ2o" target="_blank" rel="noopener">
-              Kimberlé Crenshaw – The Urgency of Intersectionality (TED Talk)
-            </a>
-          </li>
+          <li><a href="https://www.apa.org/topics/implicit-bias" target="_blank">APA: Implicit Bias</a></li>
+          <li><a href="https://www.beacon.org/assets/pdfs/whitefragilityreadingguide.pdf" target="_blank">White Fragility (PDF)</a></li>
+          <li><a href="https://womensstudies.colostate.edu/wp-content/uploads/sites/66/2021/06/Intersectionality-101.pdf" target="_blank">Intersectionality 101</a></li>
+          <li><a href="https://www.youtube.com/watch?v=OoBvzI-YZf4" target="_blank">Implicit Bias Explained</a></li>
+          <li><a href="https://www.youtube.com/watch?v=npNA-WcXPjw" target="_blank">Implicit Bias + Education</a></li>
+          <li><a href="https://www.youtube.com/watch?v=akOe5-UsQ2o" target="_blank">Kimberlé Crenshaw TED Talk</a></li>
         </ul>
       </section>
-
     </article>
   </main>
 
-
-  <!-- 🔹 Footer -->
-  <footer class="footer">
+  <footer class="container">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
-
 </body>
 </html>

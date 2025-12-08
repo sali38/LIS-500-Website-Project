@@ -8,12 +8,12 @@
 </head>
 
 <body>
-  <!-- 🔥 Header Navigation (통일된 구조 적용) -->
-  <header class="bg-light p-3">
-    <nav aria-label="Primary">
-      <ul class="container navigation">
+  <!-- Unified Navigation Header -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <ul class="navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="tech_heroes.html" aria-current="page">Tech Heroes</a></li>
+        <li><a href="tech_heroes.html" aria-current="page" class="active">Tech Heroes</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="tm_emotions.html">Emotion ML Demo</a></li>
         <li><a href="about_us.html">About Us</a></li>
@@ -21,12 +21,13 @@
     </nav>
   </header>
 
-  <main id="content" class="container">
+  <main id="content" class="container page-content">
     <article class="card">
-      <h1>Our Tech Heroes</h1>
+      <h1 class="page-title">Our Tech Heroes</h1>
       <p>Each of our team members chose a Tech Hero who inspires us in different ways. Explore their stories:</p>
 
       <div class="hero-grid" role="list">
+
         <a class="hero-btn" href="ifeoma.html" role="listitem">
           <span class="hero-title">Ifeoma Ozoma</span>
           <span class="hero-sub">Whistleblower • Tech Worker Handbook</span>
@@ -41,11 +42,12 @@
           <span class="hero-title">Jamie Gong</span>
           <span class="hero-sub">CareHero • Tech for Senior Care</span>
         </a>
+
       </div>
     </article>
   </main>
 
-  <footer class="container">
+  <footer class="footer">
     <p>Made by LIS500 Project Group 1🍈</p>
   </footer>
 </body>
